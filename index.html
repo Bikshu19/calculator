@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            justify-content: center;
+            align-content: center;
+            display: flex;
+        }
+        #contain{
+            background-color: aliceblue;
+            width: max-content;
+            height: 100%;
+            border:1px solid black;
+        }
+        .con{
+            border: none;
+         width:70px;
+         height: 80px;
+         display: block;
+         float: left;
+         margin: 20px;
+         border-radius: 100px;
+         box-shadow: 0px 0px 10px black;
+         font-weight: 400;
+        }
+        .hu{
+            font-size: 40px;
+            width: 100%;
+            height: 100px;
+            border: none;
+            text-align: center;
+        }
+        .btn{
+            background-color: aquamarine;
+            box-shadow: 0px 0px 10px black;
+        }
+        .btn1{
+            background-color: blueviolet;
+            box-shadow: 0px 0px 10px black;
+            width: 190px;
+            font-size: 40px;
+        }
+        .con:hover{
+            box-shadow: none;
+        }
+        .btn2{
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <form action=""><input type="text" class="hu"  id="display"></form>
+        <form action="">
+            <input type="button" value="AC" class="con btn2" onclick="display.value =''">
+            <input type="button" value="DE" class="con btn2" onclick="display.value =display.value .toString().slice(0,-1)">
+            <input type="button" value="+" class="con btn" onclick="display.value =display.value +'+'">
+            <input type="button" value="-" class="con btn" onclick="display.value =display.value +'-'"></form>
+            <form action="">
+                <input type="button" value="1" class="con" onclick="display.value =display.value +'1'">
+                <input type="button" value="2" class="con" onclick="display.value =display.value +'2'">
+                <input type="button" value="3" class="con" onclick="display.value =display.value +'3'">
+                <input type="button" value="*" class="con btn" onclick="display.value =display.value +'*'"></form>
+                <form action="">
+                    <input type="button" value="4" class="con" onclick="display.value =display.value +'4'">
+                    <input type="button" value="5" class="con" onclick="display.value =display.value +'5'">
+                    <input type="button" value="6" class="con" onclick="display.value =display.value +'6'">
+                    <input type="button" value="/" class="con btn" onclick="display.value =display.value +'/'"></form>
+                    <form action="">
+                        <input type="button" value="7" class="con" onclick="display.value =display.value +'7'">
+                        <input type="button" value="8" class="con" onclick="display.value =display.value +'8'">
+                        <input type="button" value="9" class="con" onclick="display.value =display.value +'9'">
+                        <input type="button" value="." class="con btn" onclick="display.value =display.value +'.'"></form>
+                        <form action="">
+                            <input type="button" value="00" class="con" onclick="display.value =display.value +'00'">
+                            <input type="button" value="0" class="con" onclick="display.value =display.value +'0'">
+                            
+                            <input type="button" value="=" class="con btn1" onclick="display.value =eval(display.value)"></form>
+                    </div>
+</body>
+</html>
